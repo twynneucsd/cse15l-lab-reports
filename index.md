@@ -1,4 +1,6 @@
 Hello cse 15l!
-![Image] (https://ih1.redbubble.net/image.3918289927.6956/st,small,507x507-pad,600x600,f8f8f8.jpg)
 **Welcome to my website!**
+![Image][1]
+[1]: https://i.pinimg.com/736x/7a/95/dc/7a95dc3a03cb0e5e8290a994d2a6a4c2.jpg
+
 
