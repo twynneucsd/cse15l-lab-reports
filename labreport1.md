@@ -4,4 +4,4 @@
 ***
 **STEP 1**
 
-Make sure to download the program "[Visual Studio Code](https://code.visualstudio.com/)" to start the process of connecting your UCSD account to the remote terminal.
+Make sure to download the program [Visual Studio Code](https://code.visualstudio.com/) to start the process of connecting your UCSD account to the remote terminal.
