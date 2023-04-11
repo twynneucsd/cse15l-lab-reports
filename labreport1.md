@@ -10,6 +10,14 @@ When you get to the webpage for Visual Studio Code, press the download button at
 
 ![VSC Website](svcwebpage.JPG)
 
-Once you have finished downloading Visual Studio Code, open the application and create a new terminal. You can do this by locating the drop down menu titled "terminal" at the top left of the screen. This image shows where to find that:
+Once you have finished downloading Visual Studio Code, start by opening the application. 
 
-![VSC Creating a New Terminal](newterminalsvc.jpg)
+**Important:** If you are using Windows *like me!* you need to also download [Git](https://gitforwindows.org/) before creating a terminal. 
+
+When you are ready to continue, it is time to create a new terminal. You can do this by clicking the "terminal" drop down menu on the top left of the Visual Studio Code application, as shown in the image below:
+
+![Creating a terminal](newterminalsvc.JPG)
+
+Once you have opened the terminal, you are only one step away from being ready to remotely access the UCSD desktops. You may have noticed that your terminal should say "powershell". It is important to change this to "bash" before attempting to log in to your UCSD account. The following image depicts where and how you can make this change:
+
+![setting up bash](gitbash.JPG)
