@@ -32,7 +32,7 @@ It is important to note that the log in information you will need to use is **NO
 
 Once you know your account credentials, you should mimic the following command as the first thing you enter into the terminal:
 
-$ ssh cs15lsp23sm@ieng6.ucsd.edu
+`$ ssh cs15lsp23sm@ieng6.ucsd.edu`
 
 **Note** Firstly, the $ will be on the terminal already and you do NOT need to type it. Second, replace the part of this command that says "cs15lsp23sm" with your associated username, in this example this refers to *my* account. 
 
@@ -49,11 +49,11 @@ When you access the remote terminal, you should experiment with running some com
 
 ![Using commands](commands.JPG)
 
-In the above screenshot, I play around with a lot of commands relating to directories, or what you may know as folders if you are unfamiliar with that term. I used the "mkdir" command to create a directory/folder titled "testdirectory", and then used the "dir" command to list my directories. I finished by changing the directory to the new one I had created using the "cd" command. These commands are important for making directories for each project you decide to work on, so you can organize your code!
+In the above screenshot, I play around with a lot of commands relating to directories, or what you may know as folders if you are unfamiliar with that term. I used the `mkdir` command to create a directory/folder titled "testdirectory", and then used the `dir` command to list my directories. I finished by changing the directory to the new one I had created using the `cd` command. These commands are important for making directories for each project you decide to work on, so you can organize your code!
 
 As you can also see, I used a long command that started with cat. I don't know what this command does, but it seems like it accessed a file titled "hello.txt" from the remote desktop and printed out it's contents. Even though I am unfamiliar with the command, by testing I am able to basically understand it, and then I can go on to learn its usages and advantages. That is the importance of practicing with commands!
 
-Lastly, I tried the "cowsay" command. It did not work likely because I need to install extra packages, but the command is supposed to print out an ASCII picture of a cow that moos back at you. I found this command by searching for fun commands to use on the internet, and even though it didn't work before my connection was interupted, I have learned the lesson that you may need to install certain things for certain commands you may find to work, so I gained knowledge in the process.
+Lastly, I tried the `cowsay` command. It did not work likely because I need to install extra packages, but the command is supposed to print out an ASCII picture of a cow that moos back at you. I found this command by searching for fun commands to use on the internet, and even though it didn't work before my connection was interupted, I have learned the lesson that you may need to install certain things for certain commands you may find to work, so I gained knowledge in the process.
 
 ***
 
