@@ -45,4 +45,83 @@ Another observation is that `str` starts on line 2 of the website's display inst
 
 ***
 
-**Part 2**
+**Part 2 - Bugs and Troubleshooting**
+
+The bug that I chose to talk about is the one found in the `reversed` method found within ArrayExamples.java
+
+The buggy code can be seen below:
+
+![buggycode](buggedcodelabr2.JPG)
+
+In the following code block, I have provided both a failure inducing and a non failure inducing input for the `reversed` method , with an associated Junit test.
+
+
+`@Test`
+
+  `public void testReversed() {`
+  
+    int[] input1 = {1,0,0,5};
+    
+    int[] input2 = {0,0,0,0};
+    
+   `assertArrayEquals(new int[]{5,0,0,1}, ArrayExamples.reversed(input1));`
+   
+   `assertArrayEquals(new int[]{0,0,0,0}, ArrayExamples.reversed(input2));`
+    
+  `}`
+  
+  After compiling and running my code, this is what I see in the terminal: 
+  
+  ![junittests](Junittestlab2.JPG)
+  
+We can see from the failed Junit test that For the array `input1`, it expects `reversed(input1)` to start with a 0, when intuitively we know that it should start with a 5. So, we see that the symptom of the bug caused by the `reversed` method sets at least the first number in the reversed array to 0 when it should and shouldn't be accurate. 
+  
+Upon further examination of the code, it becomes clear that it is returning the wrong array.
+
+The bugged code in question:
+
+`static int[] reversed(int[] arr) {`
+
+    int[] newArray = new int[arr.length];
+    
+    for(int i = 0; i < arr.length; i += 1) {
+    
+     arr[i] = newArray[arr.length - i - 1];
+      
+    }
+    
+   `return arr;`
+    
+  `}`
+
+The code starts by creating an array titled `newArray` with initial length equal to that of the inputted array `arr`. 
+
+Then the code sets all of the data from `arr` to data from `newArray`. However, since `newArray` is an empty array, this is going to set the entire array `arr` to be zeros. At the end of the code when we return `arr`, we should then expect an array full of only zeros. That is why the array {0,0,0,0} (input2) does not fail the Junit test but the array {1,0,0,5) (input1) does.
+
+To fix this code, we simply then just need to switch `newArray` with `arr` within the for loop and return `newArray` instead. Here is the associated fixed code:
+
+`static int[] reversed(int[] arr) {`
+
+    int[] newArray = new int[arr.length];
+    
+    for(int i = 0; i < arr.length; i += 1) {
+    
+      newArray[i] = arr[arr.length - i - 1];
+      
+    }
+    
+    `return newArray;`
+    
+  `}`
+  
+  This is the result of the same Junit tests when running the program with this new code:
+  
+  ![passed Junit tests](Junitpassed.jpg)
+  
+  ***
+  
+ **Part 3 - What I Learned During Labs 2&3**
+ 
+ Funny enough, I unfortunately couldn't make it to Lab 3 so my learning experience is narrowed just a bit to what I learned during Lab 2.
+ 
+ I think Lab 2 taught me many things specifically when it came to running a web server, the first being just launching one in general. I had general knowledge that computers run and host servers but I had no actual idea of how to do that. I remember as a child trying my hardest to run a minecraft server but I had absolutely no idea how to do so and couldnt follow tutorials either. While I am sure the implementation of something like that varies heavily from the web servers we produced in lab 2, I also feel like I gained insight into how servers are hosted more generally. I also got to experience the difference in data storage between server side and client side point of views, and saw that when hosted on a different computer system, each user would be able to see and manipulate a different number for their NumberServer, while when launching the site from the ieng6 remote desktops at UCSD, even though me and my lab partners were on different computers from ieng6 such as computer 202 and 203, we still saw the same number displayed on our NumberServer across our different accounts.
