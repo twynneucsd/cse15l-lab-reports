@@ -28,3 +28,17 @@ Going to the most recent PA I completed for CSE 12, knowing that there are file 
 
 I then copy and paste `".;..\libs\junit-4.13.2.jar;..\libs\hamcrest-2.2.jar"` to replace the previous `CPATH` within `grade.sh`
 
+As the student, I then try running the code immediately, and the result is the following:
+
+![fix attempt](fixattempt1.JPG)
+
+Clearly the error is not fixed. Then, looking further into the hint my TA gave me, I notice that the `libs` folder is actually `lib` in this case, and that the `hamcrest-2.2.jar` file is different from the `hamcrest-1.3-core.jar` file in my directory, so I try to fix the code by changing those in `CPATH`:
+
+![fix attempt](fixattempt2correct.JPG)
+
+Hmm, it still doesnt seem to work, but maybe there is more to the hint given by the TA. There is still something about file structures I left unattended. After maybe a bit of struggling, I noticed that the `lib` folder for the code I am working on is actually in the same directory as the file `grade.sh`, unlike the PA's where the code files are contained in another subdirectory in the same directory as `libs`. Therefore, in my `CPATH`, I need to be within my current directory and not go to my parent directory. Updating accordingly, I try:
+
+![fix attempt](fixattempt3.JPG)
+
+Now all my errors with Junit have been fixed!
+
